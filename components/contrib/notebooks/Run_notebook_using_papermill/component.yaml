@@ -33,7 +33,7 @@ implementation:
       # Converting packages_to_install from JSON to command-line arguments
       packages_to_install=$(echo "$packages_to_install" | sed -E -e 's/^\[//' -e 's/]$//' -e 's/",/" /g' -e "s/\"/'/g")
       # Installing packages
-      sh -c "python3 -m pip install --upgrade --quiet jupyter papermill==2.2.0 ${packages_to_install}"
+      sh -c "python3 -m pip install --upgrade --quiet jupyter papermill==2.3.3 ${packages_to_install}"
       # Running the notebook using papermill
       papermill --parameters_yaml "$arguments" --parameters INPUT_DATA_PATH "$input_data_path" --parameters OUTPUT_DATA_PATH "$output_data_path" "$input_notebook_path" "$output_notebook_path"
       
