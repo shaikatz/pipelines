@@ -1,9 +1,9 @@
-kfp_endpoint = None
+kfp_endpoint = 'https://71700505d90fcf58-dot-us-central1.pipelines.googleusercontent.com/'
 
 import kfp
 from kfp import components
 
-download_op = components.load_component_from_url('https://raw.githubusercontent.com/kubeflow/pipelines/240543e483076ae718f82c6f280441daa2f041fd/components/web/Download/component.yaml')
+download_op = components.load_component_from_url('https://raw.githubusercontent.com/shaikatz/pipelines/master/components/notebooks/Run_notebook_using_papermill/component.yaml')
 run_notebook_op = components.load_component_from_url('https://raw.githubusercontent.com/kubeflow/pipelines/4ebce5f643b6af5639053ea7eaed52b02bf7e928/components/notebooks/Run_notebook_using_papermill/component.yaml')
 
 def notebook_pipeline():
